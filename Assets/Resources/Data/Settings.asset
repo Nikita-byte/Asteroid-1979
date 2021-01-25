@@ -29,14 +29,18 @@ MonoBehaviour:
   MinHighOfApperance: 7
   MaxHighOfApperance: 7
   WidthOfApperance: 25
-  CoolDownOfDestroyer: 5
+  CoolDownOfDestroyer: 15
   LaserSpeed: 10
   LaserLifeTime: 5
+  MissleSpeed: 10
+  CoolDownOfMissle: 10
+  TimeOfUpdateAngle: 0.02
+  MaxAngleOfTurnMissle: 5
   MaxSpeedOfAsteroids: 360
   MinSpeedOfAsteroids: 1
   CoeffOfAsteroids: 45
   CountAsteroidsAfterDistruction: 3
   CountOfLaserShellsInPool: 50
-  CountOfBigAsteroidsInPool: 10
-  CountOfNormalAsteroidsInPool: 30
+  CountOfBigAsteroidsInPool: 20
+  CountOfNormalAsteroidsInPool: 40
   CountOfSmallAsteroidsInPool: 90

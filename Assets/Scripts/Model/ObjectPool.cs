@@ -16,6 +16,7 @@ public sealed class ObjectPool
     private Queue<GameObject> _smallAsteroidsPool;
     private Queue<GameObject> _laserShellsPool;
     private GameObject _destroyer;
+    private GameObject _missle;
     private GameObject _objectPool;
     private GameObject _ship;
     private GameObject _moveDirection;
@@ -44,6 +45,7 @@ public sealed class ObjectPool
         _normalAsteroids.transform.SetParent(_objectPool.transform);
         _smallAsteroids.transform.SetParent(_objectPool.transform);
 
+        CreateMissle();
         CreateDestroyer();
         CreateShip();
         CreateAsteroids();
@@ -104,6 +106,13 @@ public sealed class ObjectPool
         _destroyer.transform.SetParent(_objectPool.transform);
     }
 
+    private void CreateMissle()
+    {
+        _missle = GameObject.Instantiate(Resources.Load<GameObject>(AssetPath.Objects[TypeOfGameObject.Missle]));
+        _missle.SetActive(false);
+        _missle.transform.SetParent(_objectPool.transform);
+    }
+
     public GameObject GetShip()
     {
         return _ship;
@@ -123,6 +132,8 @@ public sealed class ObjectPool
                 return _smallAsteroidsPool.Dequeue();
             case TypeOfGameObject.Destroyer:
                 return _destroyer;
+            case TypeOfGameObject.Missle:
+                return _missle;
         }
 
         return null;

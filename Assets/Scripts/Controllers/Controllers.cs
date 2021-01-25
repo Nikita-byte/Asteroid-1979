@@ -13,12 +13,12 @@ public sealed class Controllers : IInitialization
         _context = new Context();
 
         _initializations = new IInitialization[2];
-        _initializations[0] = new CruiserController(_context);
-        _initializations[1] = new EnemysController(_context);
+        _initializations[0] = new EnemysController(_context);
+        _initializations[1] = new CruiserController(_context, _initializations[0] as EnemysController);
 
         _executes = new IExecute[3];
         _executes[0] = _initializations[0] as IExecute;
-        _executes[1] = new InputController(_initializations[0] as CruiserController, _context, _initializations[1] as EnemysController);
+        _executes[1] = new InputController(_initializations[1] as CruiserController, _context, _initializations[0] as EnemysController);
         _executes[2] = _initializations[1] as IExecute;
     }
 

@@ -33,6 +33,12 @@ public class GameSettings : ScriptableObject
     public float LaserSpeed;
     public float LaserLifeTime;
 
+    [Header("Missle")]
+    public float MissleSpeed;
+    public float CoolDownOfMissle;
+    public float TimeOfUpdateAngle;
+    public float MaxAngleOfTurnMissle;
+
     [Header("Asteroids")]
     public float MaxSpeedOfAsteroids;
     public float MinSpeedOfAsteroids;

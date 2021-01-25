@@ -12,7 +12,8 @@ public class AssetPath
         { TypeOfGameObject.BigAsteroid, "Prefabs/Asteroid"},
         { TypeOfGameObject.NormalAsteroid, "Prefabs/NormalAsteroid"},
         { TypeOfGameObject.SmallASteroid, "Prefabs/SmallAsteroid"},
-        { TypeOfGameObject.Destroyer, "Prefabs/Destroyer"}
+        { TypeOfGameObject.Destroyer, "Prefabs/Destroyer"},
+        { TypeOfGameObject.Missle, "Prefabs/Missle"}
     };
 
     public static readonly Dictionary<TypeOfScreen, string> Screens = new Dictionary<TypeOfScreen, string>()

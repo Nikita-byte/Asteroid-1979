@@ -66,7 +66,7 @@ public class InputController : IExecute
 
             if (Input.GetKeyDown(KeyCode.W))
             {
-
+                _cruiserController.MissleFire();
             }
         }
         

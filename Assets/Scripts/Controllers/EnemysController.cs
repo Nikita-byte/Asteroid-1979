@@ -137,4 +137,9 @@ public sealed class EnemysController : IInitialization, IExecute
             GameSettings.Instance.AngleOfTurnDestroyer / 2));
         _destroyer.gameObject.SetActive(true);
     }
+
+    public GameObject GetEnemy()
+    {
+        return _asteroids[Random.Range(0, _asteroids.Count - 1)];
+    }
 }

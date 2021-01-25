@@ -4,6 +4,7 @@
     Ship,
     GameSettings,
     Laser,
+    Missle,
     BigAsteroid,
     NormalAsteroid,
     SmallASteroid,

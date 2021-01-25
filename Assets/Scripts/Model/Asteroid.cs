@@ -65,6 +65,13 @@ public class Asteroid: MonoBehaviour
         {
             IsAlive = false;
         }
+
+        Missle temp2 = collision.gameObject.GetComponent<Missle>();
+
+        if (temp2 != null)
+        {
+            IsAlive = false;
+        }
     }
 
     //private void OnCollisionEnter2D(Collision2D collision)
